@@ -1,0 +1,16 @@
+{
+  "name": "figma-design-system-engineering",
+  "version": "1.0.0",
+  "description": "Engineer Figma design systems as deterministic, code-mappable infrastructure",
+  "main": "scripts/lint_token_names.js",
+  "scripts": {
+    "lint:tokens": "node scripts/lint_token_names.js assets/tokens.template.json",
+    "test": "pnpm run lint:tokens"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.0.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
