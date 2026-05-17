@@ -207,3 +207,9 @@ Designed for use in Claude chat (claude.ai), Claude Cowork (desktop), and Claude
 Token pipeline targets: CSS custom properties, Tailwind CSS, TypeScript, iOS Swift, Android Compose (via Style Dictionary platform configs).
 
 Component targets: React with TypeScript. Property schemas are framework-agnostic but examples use React conventions.
+
+---
+
+## License & Copyright
+
+© 2026 Michael Nau / Bornless Studio. Licensed under the MIT License.
