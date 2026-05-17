@@ -22,7 +22,13 @@
  *   tokenized utility class instantly — no Tailwind rebuild needed at runtime.
  */
 
-const tokens = require('./build/tailwind/tokens.js');
+let tokens = {};
+try {
+  tokens = require('./build/tailwind/tokens.js');
+} catch (e) {
+  // Graceful fallback if Style Dictionary has not generated the tokens yet
+  tokens = {};
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
