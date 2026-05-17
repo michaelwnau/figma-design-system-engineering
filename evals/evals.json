@@ -1,0 +1,27 @@
+{
+  "skill_name": "figma-design-system-engineering",
+  "description": "Three test cases covering Author, Document, and Audit modes. Prompts are written in the voice of a real user — a design engineer setting up or maintaining a system. No MCP is assumed available in these test prompts; the skill should fall back to advisory mode gracefully.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "author-greenfield-token-setup",
+      "mode": "Author",
+      "prompt": "Starting a new Figma file for a peacebuilding nonprofit's web platform. Tech stack on the code side is React + Tailwind. I need to set up the token architecture from scratch — primitives, semantic aliases, and dark mode. Brand color is a warm teal (#0F766E base). Walk me through how to structure the Figma variable collections and what tokens I should define before I start building components. I want this to be agent-handoff-ready so a junior dev or another agent can pick up the Style Dictionary pipeline later.",
+      "expected_output": "Step-by-step Author-mode workflow: scope confirmation, Primitives collection setup with specific token names for the teal brand ramp, Semantic Theme collection with Light/Dark modes, alias-mapping examples, layout/component conventions, and a pointer to the bundled assets (tokens.template.json, style-dictionary.config.js). Should mention MCP gate check is optional in advisory mode. Should NOT invent Figma file contents — should give the user actionable setup steps."
+    },
+    {
+      "id": 2,
+      "name": "document-handoff-md-generation",
+      "mode": "Document",
+      "prompt": "I need to write a DESIGN_SYSTEM.md for our internal repo. The system has primitives for color (gray ramp + a brand blue ramp), semantic tokens for bg/text/border with light and dark modes, three components so far (Button, Card, Input), and the handoff target is Tailwind via Style Dictionary. Give me the doc — assume the structure described above, no MCP available, write it in a format that another agent could read and use to build new components without asking me follow-up questions.",
+      "expected_output": "Complete DESIGN_SYSTEM.md following the canonical structure from SKILL.md: Overview, Token Architecture (with primitive + semantic tables), Component Conventions (Variant/Boolean/Instance Swap/Text patterns for the three components), Layout System (Auto Layout → Flexbox mapping), Theming (Light/Dark mode setup), Handoff Pipeline (Style Dictionary + Tailwind wiring), Verification & Linting. Should be agent-readable — explicit conventions, no hand-waving. Should pull tables from reference files."
+    },
+    {
+      "id": 3,
+      "name": "audit-component-drift-no-mcp",
+      "mode": "Audit",
+      "prompt": "I'm about to audit a button component in our Figma file. The system is supposed to follow strict primitive-semantic-component tiering, Auto Layout on every container, and props that match our TypeScript interface. I don't have the Figma MCP connected right now. What's the audit checklist I should run through manually, and what's the drift-report template I should fill in? Also if there's a way to lint our exported tokens.json with this skill, tell me how.",
+      "expected_output": "Audit-mode response that: (1) acknowledges the lack of MCP and pivots to a manual checklist rather than inventing findings, (2) provides the full Drift Report template from SKILL.md, (3) gives concrete manual checks for token drift, layout drift, component drift, and theming drift, (4) explains how to run scripts/lint_token_names.js on an exported tokens.json, (5) recommends Figma plugins (Design Lint, Select Layers) as alternatives to MCP."
+    }
+  ]
+}

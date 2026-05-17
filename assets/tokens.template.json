@@ -1,0 +1,169 @@
+{
+  "$schema": "https://schemas.tokens.studio/latest/tokens-schema.json",
+  "_meta": {
+    "description": "W3C Design Tokens Community Group format. Replace this entire file's structure with your project's actual values. Primitives hold raw values; semantic tokens alias primitives via {curly.braces}; component tokens (optional) alias semantics. Theme switching is handled by separate mode files (tokens.dark.json, etc.) that override the same semantic paths.",
+    "version": "0.1.0"
+  },
+  "color": {
+    "$type": "color",
+    "gray": {
+      "_description": "Primitive: raw gray ramp. No semantic meaning.",
+      "50":  { "$value": "#F9FAFB" },
+      "100": { "$value": "#F3F4F6" },
+      "200": { "$value": "#E5E7EB" },
+      "300": { "$value": "#D1D5DB" },
+      "400": { "$value": "#9CA3AF" },
+      "500": { "$value": "#6B7280" },
+      "600": { "$value": "#4B5563" },
+      "700": { "$value": "#374151" },
+      "800": { "$value": "#1F2937" },
+      "900": { "$value": "#111827" },
+      "950": { "$value": "#030712" }
+    },
+    "brand": {
+      "_description": "Primitive: brand color ramp. Replace with your actual brand palette.",
+      "50":  { "$value": "#EFF6FF" },
+      "500": { "$value": "#3B82F6" },
+      "600": { "$value": "#2563EB" },
+      "900": { "$value": "#1E3A8A" }
+    },
+    "feedback": {
+      "danger":  { "$value": "#EF4444", "$description": "Primitive: danger/destructive base hue" },
+      "success": { "$value": "#10B981", "$description": "Primitive: success/positive base hue" },
+      "warning": { "$value": "#F59E0B", "$description": "Primitive: warning/caution base hue" }
+    },
+    "bg": {
+      "_description": "Semantic: background surfaces. Aliases to primitives.",
+      "page":             { "$value": "{color.gray.50}",  "$description": "Page-level background" },
+      "surface-primary":  { "$value": "{color.gray.50}",  "$description": "Default card/panel surface" },
+      "surface-elevated": { "$value": "#FFFFFF",          "$description": "Elevated surface (modals, popovers)" },
+      "surface-inverse":  { "$value": "{color.gray.900}", "$description": "Inverse surface for emphasis blocks" }
+    },
+    "text": {
+      "_description": "Semantic: text colors by role.",
+      "primary":   { "$value": "{color.gray.900}", "$description": "Default body and heading text" },
+      "secondary": { "$value": "{color.gray.700}", "$description": "Subdued text for secondary content" },
+      "muted":     { "$value": "{color.gray.500}", "$description": "De-emphasized text, hints, captions" },
+      "inverse":   { "$value": "{color.gray.50}",  "$description": "Text on inverse/dark surfaces" }
+    },
+    "border": {
+      "subtle":  { "$value": "{color.gray.200}", "$description": "Subtle borders for low-emphasis separation" },
+      "default": { "$value": "{color.gray.300}", "$description": "Default borders for inputs and cards" },
+      "strong":  { "$value": "{color.gray.500}", "$description": "Strong borders for emphasis" }
+    }
+  },
+
+  "spacing": {
+    "$type": "dimension",
+    "_description": "Primitive spacing scale. Use semantic aliases below in components.",
+    "0":   { "$value": "0px" },
+    "1":   { "$value": "4px" },
+    "2":   { "$value": "8px" },
+    "3":   { "$value": "12px" },
+    "4":   { "$value": "16px" },
+    "5":   { "$value": "20px" },
+    "6":   { "$value": "24px" },
+    "8":   { "$value": "32px" },
+    "10":  { "$value": "40px" },
+    "12":  { "$value": "48px" },
+    "16":  { "$value": "64px" },
+    "20":  { "$value": "80px" },
+    "24":  { "$value": "96px" },
+
+    "element": {
+      "_description": "Semantic: spacing inside elements (button padding, input padding).",
+      "xs": { "$value": "{spacing.1}" },
+      "sm": { "$value": "{spacing.2}" },
+      "md": { "$value": "{spacing.3}" },
+      "lg": { "$value": "{spacing.4}" }
+    },
+    "layout": {
+      "_description": "Semantic: spacing between layout blocks (sections, cards).",
+      "sm": { "$value": "{spacing.4}" },
+      "md": { "$value": "{spacing.6}" },
+      "lg": { "$value": "{spacing.8}" },
+      "xl": { "$value": "{spacing.12}" },
+      "section": {
+        "lg": { "$value": "{spacing.16}" },
+        "xl": { "$value": "{spacing.24}" }
+      }
+    }
+  },
+
+  "radius": {
+    "$type": "dimension",
+    "none": { "$value": "0px" },
+    "sm":   { "$value": "4px" },
+    "md":   { "$value": "8px" },
+    "lg":   { "$value": "12px" },
+    "xl":   { "$value": "16px" },
+    "pill": { "$value": "9999px" }
+  },
+
+  "elevation": {
+    "$type": "shadow",
+    "_description": "Box-shadow elevations. The $value is a shadow object per DTCG spec.",
+    "surface": {
+      "raised": {
+        "$value": {
+          "color": "#0000001A",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        }
+      },
+      "overlay": {
+        "$value": {
+          "color": "#00000026",
+          "offsetX": "0px",
+          "offsetY": "10px",
+          "blur": "15px",
+          "spread": "-3px"
+        }
+      }
+    }
+  },
+
+  "typography": {
+    "family": {
+      "$type": "fontFamily",
+      "sans":    { "$value": "Inter, system-ui, sans-serif" },
+      "mono":    { "$value": "JetBrains Mono, ui-monospace, monospace" },
+      "display": { "$value": "Inter, system-ui, sans-serif" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular":  { "$value": 400 },
+      "medium":   { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold":     { "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "xs":   { "$value": "12px" },
+      "sm":   { "$value": "14px" },
+      "base": { "$value": "16px" },
+      "lg":   { "$value": "18px" },
+      "xl":   { "$value": "20px" },
+      "2xl":  { "$value": "24px" },
+      "3xl":  { "$value": "30px" },
+      "4xl":  { "$value": "36px" }
+    }
+  },
+
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "fast":   { "$value": "120ms" },
+      "base":   { "$value": "200ms" },
+      "slow":   { "$value": "320ms" }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.4, 0, 0.2, 1] },
+      "decelerate": { "$value": [0, 0, 0.2, 1] },
+      "accelerate": { "$value": [0.4, 0, 1, 1] }
+    }
+  }
+}
