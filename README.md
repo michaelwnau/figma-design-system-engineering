@@ -1,3 +1,7 @@
+[![Made for Claude Code](https://img.shields.io/badge/Made%20for-Claude%20Code-blueviolet?style=flat-square&logo=anthropic)](https://docs.anthropic.com/en/docs/claude-code)
+[![Figma MCP](https://img.shields.io/badge/Figma-MCP%20Server-ff7262?style=flat-square&logo=figma)](https://www.npmjs.com/package/@anthropic-ai/figma-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
 # figma-design-system-engineering
 
 A Claude skill for engineering Figma design systems as deterministic, code-mappable infrastructure. This skill treats Figma not as a vector drawing canvas but as a visual abstract syntax tree and data orchestration layer for UI engineering. Every artifact it produces — token collections, component schemas, layout conventions, handoff pipelines — maps 1:1 to a programmatic execution environment (React, TypeScript, CSS, Tailwind).
