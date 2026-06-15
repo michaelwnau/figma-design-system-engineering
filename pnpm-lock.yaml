@@ -12,8 +12,8 @@ importers:
         specifier: ^5.4.0
         version: 5.4.0(tslib@2.8.1)
       tailwindcss:
-        specifier: ^4.3.0
-        version: 4.3.0
+        specifier: ^4.3.1
+        version: 4.3.1
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -435,8 +435,8 @@ packages:
     engines: {node: '>=22.0.0'}
     hasBin: true
 
-  tailwindcss@4.3.0:
-    resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
+  tailwindcss@4.3.1:
+    resolution: {integrity: sha512-hk+TB1m+K8CYNrP6rjQaq/Y+4Zylwpa87mLYBKCunwnnQ9p+fHb7kmSfGqyEJoxF/O6CDyABWVFEafNSYKll+Q==}
 
   thingies@2.6.0:
     resolution: {integrity: sha512-rMHRjmlFLM1R96UYPvpmnc3LYtdFrT33JIB7L9hetGue1qAPfn1N2LJeEjxUSidu1Iku+haLZXDuEXUHNGO/lg==}
@@ -949,7 +949,7 @@ snapshots:
     transitivePeerDependencies:
       - tslib
 
-  tailwindcss@4.3.0: {}
+  tailwindcss@4.3.1: {}
 
   thingies@2.6.0(tslib@2.8.1):
     dependencies:
