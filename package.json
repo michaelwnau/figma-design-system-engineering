@@ -8,7 +8,7 @@
     "test": "pnpm run lint:tokens"
   },
   "devDependencies": {
-    "style-dictionary": "^5.4.0",
+    "style-dictionary": "^5.4.4",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   },
